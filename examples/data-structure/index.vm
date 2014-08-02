@@ -4,11 +4,6 @@ $user
 $user.favorites[0]
 $user.favorites[$favIdx]
 
-$method.foo($arg).bar
-
-$user.name.length()
-$user.favorites.size()
-$order.keySet()
 $order.orderId
 
 #set($temp = 1)
@@ -21,7 +16,10 @@ $addr.country
 $foreach.index: $employee.name - $employee.email
 #end
 
-#parse('/child.vm')
+#set($list = [0 .. 10])
+#foreach($item in $list)
+$argInForeach
+#end
 
 #define($userInfo)
 $user.name
